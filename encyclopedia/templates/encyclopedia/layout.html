@@ -1,36 +1,27 @@
 {% load static %}
 
 <!DOCTYPE html>
-
-<!-- Tab icon, a 'favicon' -->
 <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
 <html lang="en">
-
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
 </head>
-
 <body>
     <div class="row">
-        <!-- Left vertical bar with logo, searchbar, and links -->
-        <div class="sidebar col-lg-2 col-md-3">
-
-            <!-- Custom logo (replaces CS50's 'Wiki' text) -->
-            <img src="/static/WikiLogo.png" style="width:200px"><br><br>
-
-            <!-- Searchbar, additionally passing in Django CSRF token -->
-            <form action="{% url 'wiki:search' %}" method="post">
-                <input class="search" type="text" name="q" placeholder="Search Pages" type="submit">
-                {% csrf_token %}
-            </form>
-
-            <!-- Blank char (&nbsp) purely for spacing purposes -->
-            <div>
+        <div class="sidebar">
+            <img class="logo" src="/static/logo-light.png" style="width:100%" alt="Wikipedia">
+            <div class="box-sidebar">
+                <form class="form-sidebar" action="{% url 'wiki:search' %}" method="post">
+                    <svg class="icon-sidebar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g><path d="M12.2 13.6a7 7 0 111.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1010 0A5 5 0 003 8"></path></g></svg>
+                    <input class="search" type="text" name="q" placeholder="Search Pages" type="submit">
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div style="margin-top: 10px;">
                 <a href="{% url 'wiki:index' %}">&nbspHome</a>
             </div>
-            <div>
+            <div style="margin-top: 5px;margin-bottom: 5px;">
                 <a href="{% url 'wiki:new' %}">&nbspCreate New Page</a>
             </div>
             <div>
@@ -39,12 +30,10 @@
             {% block nav %}
             {% endblock %}
         </div>
-        <div class="main col-lg-10 col-md-9">
+        <div class="main">
             {% block body %}
             {% endblock %}
         </div>
     </div>
-
 </body>
-
 </html>

@@ -1,48 +1,77 @@
-/* Prevents page moving slightly when inputting text to searchbar */
 html, body {
     overflow: hidden;
 }
-
-/* Prevents form extending to edge of screen */
 form {
-    width: 98.5%;
+    
 }
-
 body {
     margin: 0;
     background-color: white;
+    font-family: sans-serif;
 }
-
 code {
     white-space: pre;
 }
-
 h1 {
     margin-top: 0px;
     padding-top: 20px;
 }
-
+ul {
+    display: grid;
+    gap: 5px;
+}
 textarea {
     height: 90vh;
     width: 80%;
 }
-
-.main {
-    padding: 10px;
+a {
+    text-decoration: none;
 }
-
+a:hover {
+    text-decoration: underline;
+}
+.row {
+    display: flex;
+}
+.main {
+    width: 100%;
+    padding: 20px;
+}
 .search {
     width: 100%;
     font-size: 15px;
     line-height: 15px;
+    background-color: transparent;
+    border: none;
 }
-
 .sidebar {
-    background-color: #f0f0f0;
+    width: 20%;
+    background-color: #f8f9fa;
     height: 100vh;
     padding: 20px;
 }
-
 .sidebar h2 {
     margin-top: 5px;
+}
+.box-sidebar {
+    border-top: 1px solid #a2a9b1;
+    border-bottom: 1px solid #a2a9b1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form-sidebar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    background-color: white;
+}
+.logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.icon-sidebar {
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
 }
