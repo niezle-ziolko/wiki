@@ -1,16 +1,25 @@
 {% extends "encyclopedia/layout.html" %}
+<!-- Inherit the layout.html template from the 'encyclopedia' app -->
 
 {% block title %}
     Encyclopedia
 {% endblock %}
+<!-- Define the title of the page as "Encyclopedia" within the title block -->
 
 {% block body %}
+<!-- Start the body block, which will contain the main content of the page -->
 <div class="title">
     <h1>All Pages</h1>
+    <!-- Heading displaying "All Pages" -->
 </div>
+
 <ul>
     {% for entry in entries %}
-    <li><a href="{{entry}}" </a>{{ entry }}</li>
+    <!-- Loop through all the entries passed from the view -->
+    <li><a href="{{entry}}">{{ entry}}</a></li>
+    <!-- For each entry, create a list item with a hyperlink to that entry -->
     {% endfor %}
 </ul>
+<!-- End the unordered list displaying all the entries -->
+
 {% endblock %}

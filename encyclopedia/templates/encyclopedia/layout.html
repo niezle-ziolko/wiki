@@ -1,37 +1,74 @@
 {% load static %}
+<!-- Load the Django staticfiles library to access static assets like CSS, images, and icons -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
+    <!-- Placeholder for the title block that will be set by child templates -->
+
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <!-- Link to the favicon using Django's static tag -->
+
     <link href="{% static '/styles.css' %}" rel="stylesheet">
+    <!-- Link to the stylesheet using Django's static tag -->
 </head>
 <body>
     <div class="row">
+        <!-- Main container for layout, containing the sidebar and main content -->
+        
         <div class="sidebar">
+            <!-- Sidebar section -->
+
             <img class="logo" src="/static/logo-light.png" style="width:100%" alt="Wikipedia">
+            <!-- Logo displayed in the sidebar -->
+
             <div class="box-sidebar">
+                <!-- Container for the search form -->
+                
                 <form class="form-sidebar" action="{% url 'wiki:search' %}" method="post">
-                    <svg class="icon-sidebar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><g><path d="M12.2 13.6a7 7 0 111.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1010 0A5 5 0 003 8"></path></g></svg>
+                    <!-- Form for searching encyclopedia pages. The form uses the 'search' URL from the wiki app -->
+
+                    <svg class="icon-sidebar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                        <g>
+                            <path d="M12.2 13.6a7 7 0 111.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1010 0A5 5 0 003 8"></path>
+                        </g>
+                    </svg>
+                    <!-- Search icon displayed in the input field -->
+
                     <input class="search" type="text" name="q" placeholder="Search Pages" type="submit">
+                    <!-- Input field for entering search queries -->
+                    
                     {% csrf_token %}
+                    <!-- CSRF token for security -->
                 </form>
             </div>
+
             <div style="margin-top: 10px;">
                 <a href="{% url 'wiki:index' %}">&nbspHome</a>
+                <!-- Link to the home page using the 'index' URL from the wiki app -->
             </div>
+
             <div style="margin-top: 5px;margin-bottom: 5px;">
                 <a href="{% url 'wiki:new' %}">&nbspCreate New Page</a>
+                <!-- Link to the page for creating a new encyclopedia entry -->
             </div>
+
             <div>
                 <a href="{% url 'wiki:random_page' %}">&nbspRandom Page</a>
+                <!-- Link to a random encyclopedia page -->
             </div>
+
             {% block nav %}
+            <!-- Placeholder for additional navigation links or content added by child templates -->
             {% endblock %}
         </div>
+
         <div class="main">
+            <!-- Main content area -->
+            
             {% block body %}
+            <!-- Placeholder for the body content provided by child templates -->
             {% endblock %}
         </div>
     </div>

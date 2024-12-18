@@ -1,3 +1,2 @@
 from django.contrib import admin
-
-# Register your models here.
+# Import the Django admin module to manage the admin interface of the application
