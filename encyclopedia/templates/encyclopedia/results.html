@@ -5,16 +5,17 @@
 {% endblock %}
 
 {% block body %}
+<div class="title">
+    <h1>Search Results</h1>
+</div>
 
-<h1>Search Results</h1>
-
+{% if results|length > 0 %}
 <ul>
     {% for page in results %}
-    <li><a href="/{{page}}" </a>{{ page }}</li>
-    <!-- If no results, display and link to index (prevents empty list) -->
-    {% empty %}
-    <li> No results found. Click <a href="/"> here</a> to go back. </li>
+    <li><a href="/{{ page }}">{{ page }}</a></li>
     {% endfor %}
 </ul>
-
+{% else %}
+    <p>No results found. Click <a href="/"> here</a> to go back.</p>
+{% endif %}
 {% endblock %}

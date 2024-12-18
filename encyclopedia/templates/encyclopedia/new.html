@@ -5,11 +5,10 @@
 {% endblock %}
 
 {% block body %}
-
-<h1> New Page </h1>
-
-<!-- New entry page. Form with two fields: name and content (textarea) -->
-<form action="{% url 'wiki:new' %}" method="post">
+<div class="title">
+    <h1>New Page</h1>
+</div>
+<form action="{% url 'wiki:new' %}" method="post" style="margin-top: 1em;">
     <div class="form-group">
         <label for="title">Entry Title:</label>
         <input type="text" name="title" id="title" class="form-control">
@@ -19,7 +18,6 @@
         <textarea class="form-control" name="content" rows="15" id="content"></textarea>
     </div>
     {% csrf_token %}
-    <button class="btn btn-primary">Submit</button>
+    <button>Submit</button>
 </form>
-
 {% endblock %}

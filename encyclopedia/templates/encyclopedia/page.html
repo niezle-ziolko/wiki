@@ -5,14 +5,12 @@
 {% endblock %}
 
 {% block body %}
-
-<!-- Hyperlink to edit page -->
-<a href='/{{entry}}/edit/' class="btn btn-primary" role="button"> Edit Page</a>
-
-<!-- Entry name -->
-<h1>{{entry}}</h1>
-
-<!-- Markup content as HTML (safe necessary to display) -->
+<div class="title">
+    <h1>{{entry}}</h1>
+    <span>[</span>
+    <a href='/{{entry}}/edit/' class="button-edit" role="button" aria-label="Edit">Edit Page</a>
+    <span>]</span>
+</div>
 {{ content | safe }}
 
 {% endblock %}

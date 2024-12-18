@@ -8,10 +8,8 @@ from . import util  # CS50W provided functions
 import markdown2    # Text-to-HTML convertor, see: https://github.com/trentm/python-markdown2
 import random   # For random page
 
-
 def index(request):
     """Lists all curent entries"""
-
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
@@ -25,7 +23,8 @@ def page(request, entry):
 
     if content == None:
         return render(request, "encyclopedia/result.html", {
-            "message": "404 - Page Not Found (...Literally!)"
+            "title": "Oh no! Page not found",
+            "message": "No results found. Click <a href=\"/\"> here</a> to go back."
         })
 
     markdown_text = markdown2.markdown(content)
