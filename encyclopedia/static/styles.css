@@ -6,6 +6,10 @@ body {
     font-family: sans-serif;
     background-color: white;
 }
+body.dark-theme {
+    background-color: #202124;
+    color: #e8e8e8;
+}
 code {
     white-space: pre;
 }
@@ -22,6 +26,11 @@ ul {
 }
 textarea {
     height: 10vh;
+}
+body.dark-theme textarea {
+    background-color: #171717;
+    color: #e8e8e8;
+    border-radius: 3px;
 }
 a {
     color: #36c;
@@ -51,6 +60,11 @@ form {
     gap: 15px;
     display: grid;
 }
+.theme-button {
+    position: absolute;
+    bottom: 10px;
+    width: 125px;
+}
 .row {
     display: flex;
 }
@@ -65,11 +79,17 @@ form {
     line-height: 15px;
     background-color: transparent;
 }
+body.dark-theme .search {
+    color: #e8e8e8;
+}
 .sidebar {
     width: 20%;
     height: 100vh;
     padding: 20px;
     background-color: #f8f9fa;
+}
+body.dark-theme .sidebar {
+    background-color: #171717;
 }
 .sidebar h2 {
     margin-top: 5px;
@@ -88,6 +108,9 @@ form {
     border-radius: 3px;
     background-color: white;
 }
+body.dark-theme .form-sidebar {
+    background-color: #202124;
+}
 .form-group {
     display: grid;
 }
@@ -100,6 +123,9 @@ form {
     padding-left: 5px;
     padding-right: 3px;
 }
+body.dark-theme .icon-sidebar {
+    fill: #e8e8e8;
+}
 .button-edit {
     font-size: 15px;
 }
@@ -108,4 +134,9 @@ form {
     align-items: baseline;
     border-bottom: 1px solid #a2a9b1;
     padding-bottom: 10px;
+}
+body.dark-theme #title {
+    background-color: #171717;
+    color: #e8e8e8;
+    border-radius: 3px;
 }

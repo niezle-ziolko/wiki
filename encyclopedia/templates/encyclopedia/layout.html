@@ -13,7 +13,7 @@
     <link href="{% static '/styles.css' %}" rel="stylesheet">
     <!-- Link to the stylesheet using Django's static tag -->
 </head>
-<body>
+<body class="light-theme">
     <div class="row">
         <!-- Main container for layout, containing the sidebar and main content -->
         
@@ -59,6 +59,8 @@
                 <!-- Link to a random encyclopedia page -->
             </div>
 
+            <button class="theme-button" id="theme-toggle">Theme: light</button>
+
             {% block nav %}
             <!-- Placeholder for additional navigation links or content added by child templates -->
             {% endblock %}
@@ -72,5 +74,8 @@
             {% endblock %}
         </div>
     </div>
+
+    <!-- Links the external JavaScript file and ensures it loads after the page -->
+    <script src="{% static '/script.js' %}" as="script" defer></script>
 </body>
 </html>
