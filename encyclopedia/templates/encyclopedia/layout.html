@@ -7,10 +7,10 @@
     <title>{% block title %}{% endblock %}</title>
     <!-- Placeholder for the title block that will be set by child templates -->
 
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static '/encyclopedia/favicon.ico' %}" />
     <!-- Link to the favicon using Django's static tag -->
 
-    <link href="{% static '/styles.css' %}" rel="stylesheet">
+    <link href="{% static '/encyclopedia/styles.css' %}" rel="stylesheet">
     <!-- Link to the stylesheet using Django's static tag -->
 </head>
 <body class="light-theme">
@@ -20,7 +20,7 @@
         <div class="sidebar">
             <!-- Sidebar section -->
 
-            <img class="logo" src="/static/logo-light.png" style="width:100%" alt="Wikipedia">
+            <img class="logo" src="/static/encyclopedia/logo-light.png" style="width:100%" alt="Wikipedia">
             <!-- Logo displayed in the sidebar -->
 
             <div class="box-sidebar">
@@ -76,6 +76,6 @@
     </div>
 
     <!-- Links the external JavaScript file and ensures it loads after the page -->
-    <script src="{% static '/script.js' %}" as="script" defer></script>
+    <script src="{% static '/encyclopedia/script.js' %}" as="script" defer></script>
 </body>
 </html>

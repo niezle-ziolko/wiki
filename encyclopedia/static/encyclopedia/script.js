@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isDark) {
             body.classList.add('dark-theme');
             themeToggle.textContent = 'Theme: dark'; // Set the text to "Theme: dark"
-            logo.src = '/static/logo-dark.png'; // Switch to the dark mode logo
+            logo.src = '/static/encyclopedia/logo-dark.png'; // Switch to the dark mode logo
             logo.alt = 'Encyclopedia dark mode'; // Update the logo's alt text
         } else {
             body.classList.remove('dark-theme');
             themeToggle.textContent = 'Theme: light'; // Set the text to "Theme: light"
-            logo.src = '/static/logo-light.png'; // Switch to the light mode logo
+            logo.src = '/static/encyclopedia/logo-light.png'; // Switch to the light mode logo
             logo.alt = 'Encyclopedia light mode'; // Update the logo's alt text
         };
     };
