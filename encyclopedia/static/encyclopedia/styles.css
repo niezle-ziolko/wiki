@@ -96,6 +96,11 @@ body.dark-theme .sidebar {
 .sidebar h2 {
     margin-top: 5px;
 }
+.box-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .box-sidebar {
     padding-top: 10px;
     padding-bottom: 10px;
