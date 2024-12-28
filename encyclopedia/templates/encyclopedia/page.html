@@ -2,7 +2,7 @@
 <!-- Extend the base layout template from the encyclopedia app -->
 
 {% block title %}
-    Encyclopedia
+    Encyclopedia - {{ entry }}
 {% endblock %}
 <!-- Define the title of the page as "Encyclopedia" within the title block -->
 
@@ -10,7 +10,7 @@
 <div class="title">
     <!-- Title section of the page -->
 
-    <h1>{{entry}}</h1>
+    <h1>{{ entry }}</h1>
     <!-- Display the name of the current encyclopedia entry dynamically -->
 
     <span>[</span>
