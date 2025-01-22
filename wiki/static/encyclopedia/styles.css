@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    transition: all 0.3s;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+body.dark-theme {
+    color: #e8e8e8;
+    background-color: #202124;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-family: 'Linux Libertine';
+}
+
+h2 {
+    margin-bottom: 0;
+    font-family: 'Linux Libertine';
+}
+
+hr {
+    color: #a2a9b1;
+}
+
+p {
+    line-height: 20px;
+}
+
+ul {
+    gap: 5px;
+    display: grid;
+    padding-left: 15px;
+}
+
+textarea {
+    padding: 5px;
+    height: 45vh;
+    resize: vertical;
+    font-size: medium;
+    border-radius: 3px;
+    font-family: sans-serif;
+    border: 1px solid #a2a9b1;
+}
+
+body.dark-theme textarea {
+    color: #e8e8e8;
+    background-color: #171717;
+}
+
+a {
+    color: #36c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 75px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-color: #36c;
+    background-color: #36c;
+}
+
+button:hover {
+    border-color: #3056a9;
+    background-color: #3056a9;
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+form {
+    gap: 15px;
+    display: grid;
+    margin-top: 1em;
+}
+
+.theme-button {
+    bottom: 20px;
+    width: 125px;
+    position: fixed;
+}
+
+.row {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.search {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    line-height: 15px;
+    background-color: transparent;
+}
+
+body.dark-theme .search {
+    color: #e8e8e8;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+body.dark-theme .sidebar {
+    background-color: #171717;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.box-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-sidebar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #a2a9b1;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+.form-sidebar {
+    display: flex;
+    margin-top: 0;
+    border-radius: 3px;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #a2a9b1;
+}
+
+body.dark-theme .form-sidebar {
+    background-color: #202124;
+}
+
+.form-group {
+    display: grid;
+}
+
+.logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.icon-sidebar {
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+
+body.dark-theme .icon-sidebar {
+    fill: #e8e8e8;
+}
+
+.button-edit {
+    font-size: 15px;
+}
+
+.title {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: baseline;
+    border-bottom: 2px solid #a2a9b1;
+}
+
+#title {
+    padding: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #a2a9b1;
+    font-family: 'Linux Libertine';
+}
+
+body.dark-theme #title {
+    color: #e8e8e8;
+    background-color: #171717;
+}
+
+.github-box {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.github-box div, .github-box div a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.github-box div {
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: flex-end;
+    transform: rotate(-45deg);
+}
+
+.github-box:after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 200px solid transparent;
+    border-left: 200px solid transparent;
+    border-bottom: 200px solid #343535;
+}
+
+.github-box div a {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 -12.8px;
+    text-decoration: none;
+    font-family: monospace;
+    padding: 3px 25px 25px 25px;
+    -webkit-text-decoration: none;
+    transition: color .15s cubic-bezier(1,-.115,.975,.855);
+}
+
+.github-box div a:focus, .github-box div a:hover {
+    color: #a6a6a6;
+}
+
+.github-icon {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
