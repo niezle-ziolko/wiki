@@ -8,8 +8,6 @@ Demo site: [https://wiki-cs50.vercel.app](https://wiki-cs50.vercel.app)
 
 A short video where I go through the required specifications of the project: [https://youtu.be/VMSHx8HTh2w](https://youtu.be/VMSHx8HTh2w)
 
----
-
 ## Project Requirements
 
 ### Website Structure
