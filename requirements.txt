@@ -1,4 +1,6 @@
 Django
 markdown2
-psycopg2-binary
-python-decouple
+dj_database_url
+mysqlclient
+psycopg[binary]
+gunicorn
