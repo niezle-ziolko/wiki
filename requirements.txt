@@ -1,6 +1,3 @@
 Django
 markdown2
-dj_database_url
-mysqlclient
-psycopg[binary]
 gunicorn
