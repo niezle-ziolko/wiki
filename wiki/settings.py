@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 '''
 
 import os
-from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -130,10 +129,10 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CLOUDFLARE_R2_CONFIG_OPTIONS = {
-    'bucket_name': config('CLOUDFLARE_R2_BUCKET'),
-    'endpoint_url': config('CLOUDFLARE_R2_BUCKET_ENDPOINT'),
-    'access_key': config('CLOUDFLARE_R2_ACCESS_KEY'),
-    'secret_key': config('CLOUDFLARE_R2_SECRET_KEY'),
+    'bucket_name': 'cs50',
+    'endpoint_url': 'https://773fd3d8aa87373cd86cf2655960cccc.r2.cloudflarestorage.com',
+    'access_key': '841180e131726f073fe06e4f68e10000',
+    'secret_key': 'c890eb2b66abcdcd02350e8d81be3e86a2547a392deb14a12d6db387472ef25a',
     'default_acl': 'public-read',
     'signature_version': 's3v4'
 }
