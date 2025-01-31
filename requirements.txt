@@ -1,5 +1,6 @@
 Django
 markdown2
 django-cf
+django-d1
 django-storages[s3]
 python-decouple
