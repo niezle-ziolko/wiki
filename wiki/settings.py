@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://cs50-wiki.vercel.app',
-    'https://8000-niezleziolko-wiki-7c2otk16w8w.ws-eu117.gitpod.io'
+    'https://wiki-cs50.vercel.app'
 ]
 
 # Application definition
@@ -80,10 +79,8 @@ WSGI_APPLICATION = 'wiki.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.django-cf.django_d1',
-        'CLOUDFLARE_DATABASE_ID': config('CLOUDFLARE_DATABASE_ID'),
-        'CLOUDFLARE_ACCOUNT_ID': config('CLOUDFLARE_ACCOUNT_ID'),
-        'CLOUDFLARE_TOKEN': config('CLOUDFLARE_TOKEN')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
 
