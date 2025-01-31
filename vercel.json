@@ -5,15 +5,15 @@
             "src": "wiki/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "runtime": "python"
+                "runtime": "python3"
             }
         },
         {
-          "src": "build.sh",
-          "use": "@vercel/static-build",
-          "config": {
-            "distDir": "encyclopedia/static"
-          }
+            "src": "build.sh",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "encyclopedia/static"
+            }
         }
     ],
     "routes": [
@@ -25,5 +25,14 @@
             "src": "/static/(.*)",
             "dest": "/static/$1"
         }
-    ]
+    ],
+    "build": {
+        "env": {
+            "PYTHON_VERSION": "3.12"
+        },
+        "commands": [
+            "pip install -r requirements.txt",
+            "pip install django-cf"
+        ]
+    }
 }
