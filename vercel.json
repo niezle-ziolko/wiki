@@ -5,8 +5,7 @@
             "src": "wiki/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "runtime": "python",
-                "pythonVersion": "3.10"
+                "runtime": "python"
             }
         },
         {
