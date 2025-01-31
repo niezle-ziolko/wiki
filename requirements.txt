@@ -1,5 +1,5 @@
 Django
 markdown2
-django-cf=0.0.17
+django-cf==0.0.17
 django-storages[s3]
 python-decouple
