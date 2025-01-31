@@ -1,5 +1,4 @@
 from django.urls import path
-from django_distill import distill_path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -11,10 +10,10 @@ app_name = 'wiki'
 urlpatterns = [
     # Define URL patterns for the 'wiki' app
 
-    distill_path('', views.index, name='index', distill_file='index.html'),
+    path('', views.index, name='index'),
     # URL for the homepage, associated with the 'index' view and named 'index'
 
-    distill_path('new/', views.new, name='new', distill_file='index.html'),
+    path('new/', views.new, name='new'),
     # URL for the page to create a new entry, associated with the 'new' view and named 'new'
 
     path('random_page/', views.random_page, name='random_page'),
