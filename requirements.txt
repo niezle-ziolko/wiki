@@ -1,3 +1,5 @@
 Django
 markdown2
-django-distill
+django-cf
+django-storages[s3]
+python-decouple

@@ -1,0 +1,30 @@
+{
+    "public": true,
+    "builds": [
+        {
+            "src": "wiki/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "runtime": "python",
+                "pythonVersion": "3.10"
+            }
+        },
+        {
+          "src": "build.sh",
+          "use": "@vercel/static-build",
+          "config": {
+            "distDir": "encyclopedia/static"
+          }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "wiki/wsgi.py"
+        },
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        }
+    ]
+}
